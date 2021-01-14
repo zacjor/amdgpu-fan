@@ -55,7 +55,7 @@ class FanController:
 def load_config(path):
     logger.debug(f'loading config from {path}')
     with open(path) as f:
-        return yaml.load(f)
+        return yaml.load(f, Loader=yaml.FullLoader)
 
 
 def main():
